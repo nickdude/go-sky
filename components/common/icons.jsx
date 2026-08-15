@@ -209,6 +209,281 @@ export function YoutubeIcon(props) {
   );
 }
 
+/* ---- Interface / affordance icons ---- */
+
+export function ChevronDownIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M6 9l6 6 6-6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+export function ArrowUpRightIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M7 17 17 7M8 7h9v9"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+export function UploadIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M12 16V4m0 0L8 8m4-4 4 4M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+export function ShieldCheckIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M12 3 5 6v5c0 4.4 3 8.3 7 9.5 4-1.2 7-5.1 7-9.5V6l-7-3Z"
+        fill="currentColor"
+      />
+      <path
+        d="m9 12 2 2 4-4"
+        stroke="#fff"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+/* ---- "Our story" accordion icons ---- */
+
+export function EyeIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinejoin="round"
+      />
+      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.7" />
+    </Svg>
+  );
+}
+
+export function HistoryIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M3 12a9 9 0 1 0 3-6.7M3 4v4h4M12 8v4l3 2"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+export function TargetIcon(props) {
+  return (
+    <Svg {...props}>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.7" />
+      <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="1.7" />
+      <circle cx="12" cy="12" r="1.6" fill="currentColor" />
+    </Svg>
+  );
+}
+
+export function HeartIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M12 20s-7-4.3-9.3-8.5C1.2 8.7 2.6 5.5 5.7 5.5c1.9 0 3.2 1.1 4.3 2.6C11.1 6.6 12.4 5.5 14.3 5.5c3.1 0 4.5 3.2 3 6C19 15.7 12 20 12 20Z"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+/* ---- Feature / approach icons ---- */
+
+export function ClockIcon(props) {
+  return (
+    <Svg {...props}>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.7" />
+      <path
+        d="M12 7v5l3.5 2"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+export function UsersIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M8.5 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm7 0a3 3 0 1 0 0-6M3 20v-1a5 5 0 0 1 5-5h1a5 5 0 0 1 5 5v1M16 14h.5a5 5 0 0 1 5 5v1"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+export function TagIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M3 12.5V4a1 1 0 0 1 1-1h8.5L21 11.5a1.5 1.5 0 0 1 0 2.1l-6.4 6.4a1.5 1.5 0 0 1-2.1 0L3 12.5Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+      <circle cx="7.5" cy="7.5" r="1.4" fill="currentColor" />
+    </Svg>
+  );
+}
+
+export function ChatIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-4 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8 9.5h8M8 13h5"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </Svg>
+  );
+}
+
+export function TruckIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M3 6h11v9H3V6Zm11 3h4l3 3v3h-7V9Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+      <circle cx="7" cy="18" r="1.8" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="17.5" cy="18" r="1.8" stroke="currentColor" strokeWidth="1.6" />
+    </Svg>
+  );
+}
+
+export function GlobeIcon(props) {
+  return (
+    <Svg {...props}>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.6" />
+      <path
+        d="M3 12h18M12 3c2.5 2.7 3.8 5.8 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.8-3.8-9S9.5 5.7 12 3Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+export function ClipboardIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M9 4h6v2H9V4Zm-2 1H6a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-1"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8.5 12h7M8.5 16h5"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </Svg>
+  );
+}
+
+export function BulbIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.5.4.5.7.5 1.1v1h6v-1c0-.4 0-.7.5-1.1A6 6 0 0 0 12 3Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+export function GearIcon(props) {
+  return (
+    <Svg {...props}>
+      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.6" />
+      <path
+        d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5 5l2.1 2.1M16.9 16.9 19 19M19 5l-2.1 2.1M7.1 16.9 5 19"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </Svg>
+  );
+}
+
+export function BoxIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M12 3 4 7v10l8 4 8-4V7l-8-4Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+      <path
+        d="m4 7 8 4 8-4M12 21V11"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
 // Lookup used where icons are referenced by string name in data/config.
 export const iconMap = {
   office: OfficeIcon,
@@ -219,4 +494,22 @@ export const iconMap = {
   facebook: FacebookIcon,
   twitter: TwitterIcon,
   youtube: YoutubeIcon,
+  // Why Us feature cards
+  clock: ClockIcon,
+  users: UsersIcon,
+  shieldCheck: ShieldCheckIcon,
+  tag: TagIcon,
+  chat: ChatIcon,
+  truck: TruckIcon,
+  globe: GlobeIcon,
+  // Our approach steps
+  clipboard: ClipboardIcon,
+  bulb: BulbIcon,
+  gear: GearIcon,
+  box: BoxIcon,
+  // About "Our story" accordion
+  eye: EyeIcon,
+  history: HistoryIcon,
+  target: TargetIcon,
+  heart: HeartIcon,
 };

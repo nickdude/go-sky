@@ -11,6 +11,7 @@
 
 export const mainNav = [
   { label: "Home", href: "/" },
+  { label: "Why Us", href: "/why-us" },
   { label: "Solutions", href: "/solutions" },
   { label: "Network", href: "/network" },
   { label: "About Us", href: "/about" },
@@ -25,7 +26,7 @@ export const footerNav = [
     title: "Who we are",
     links: [
       { label: "About us", href: "/about" },
-      { label: "Our commitments", href: "/about#commitments" },
+      { label: "Why choose us", href: "/why-us" },
       { label: "Our values", href: "/about#values" },
       { label: "Our history", href: "/about#history" },
       { label: "Our products", href: "/solutions" },
@@ -64,6 +65,7 @@ export const legalNav = [
 // are optional hints for crawlers.
 export const sitemapRoutes = [
   { path: "/", priority: 1.0, changeFrequency: "weekly" },
+  { path: "/why-us", priority: 0.8, changeFrequency: "monthly" },
   { path: "/solutions", priority: 0.8, changeFrequency: "monthly" },
   { path: "/network", priority: 0.8, changeFrequency: "monthly" },
   { path: "/about", priority: 0.7, changeFrequency: "monthly" },
