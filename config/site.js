@@ -41,7 +41,7 @@ export const siteConfig = {
     site: "@gosky",
   },
   contact: {
-    email: "connect@gosky.com",
+    email: "nomination@gosky.com",
     phone: "+91 737 839 7539",
     // Address split into display lines for the footer.
     address: [
