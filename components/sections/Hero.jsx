@@ -19,7 +19,7 @@ export default function Hero() {
       {/* Copy */}
       <Container className="relative z-10 py-12 sm:py-16 lg:py-24">
         <div className="max-w-xl">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-brand-blue">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-brand-purple">
             {hero.eyebrow}
           </p>
           <h1
@@ -27,7 +27,7 @@ export default function Hero() {
             className="text-4xl font-semibold leading-[1.12] text-brand-navy sm:text-5xl lg:text-[3.25rem]"
           >
             {hero.titleBefore}
-            <span className="text-brand-blue">{hero.highlight}</span>
+            <span className="text-brand-purple">{hero.highlight}</span>
             <span className="text-brand-purple">{hero.titleMiddle}</span>
             {hero.titleAfter}
           </h1>
