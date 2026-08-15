@@ -1,50 +1,119 @@
 import Link from "next/link";
 import Container from "@/components/common/Container";
 import Logo from "@/components/common/Logo";
-import Button from "@/components/common/Button";
 import { iconMap } from "@/components/common/icons";
 import { siteConfig } from "@/config/site";
 import { footerNav, legalNav } from "@/config/navigation";
 
 /**
- * Site footer: brand, grouped link columns, account CTA, and a bottom bar with
- * legal links and social icons. Structure is driven by config/navigation.js.
+ * Site footer: brand blurb, contact details, main links and social icons across
+ * four columns, followed by a bottom bar with copyright, legal links, social
+ * icons and a "Back to top" anchor. Content is driven by config/site.js and
+ * config/navigation.js.
  */
 export default function Footer() {
   const year = new Date().getFullYear();
+  const mainLinks = footerNav[0];
+  const telHref = `tel:${siteConfig.contact.phone.replace(/[^\d+]/g, "")}`;
 
   return (
     <footer className="bg-brand-lavender text-brand-ink">
       <Container className="py-14">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[1.2fr_repeat(3,1fr)_auto]">
+        <Logo height={48} />
+
+        <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          {/* About */}
           <div>
-            <Logo height={44} />
+            <h2 className="mb-4 text-sm font-semibold text-brand-purple">
+              About Us
+            </h2>
+            <p className="max-w-xs text-sm leading-relaxed text-brand-muted">
+              {siteConfig.blurb}
+            </p>
+            <Link
+              href="/about"
+              className="mt-5 inline-block text-sm font-semibold text-brand-blue transition-colors hover:text-brand-blue-dark"
+            >
+              Learn More
+            </Link>
           </div>
 
-          {footerNav.map((group) => (
-            <nav key={group.title} aria-label={group.title}>
-              <h2 className="mb-4 text-sm font-semibold text-brand-purple">
-                {group.title}
-              </h2>
-              <ul className="space-y-3">
-                {group.links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-brand-muted transition-colors hover:text-brand-purple"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          ))}
+          {/* Contacts */}
+          <div>
+            <h2 className="mb-4 text-sm font-semibold text-brand-purple">
+              Contacts
+            </h2>
+            <ul className="space-y-4 text-sm text-brand-muted">
+              <li>
+                <a
+                  href={telHref}
+                  className="text-brand-ink underline underline-offset-4 transition-colors hover:text-brand-purple"
+                >
+                  {siteConfig.contact.phone}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${siteConfig.contact.email}`}
+                  className="text-brand-ink underline underline-offset-4 transition-colors hover:text-brand-purple"
+                >
+                  {siteConfig.contact.email}
+                </a>
+              </li>
+              <li>
+                <address className="not-italic leading-relaxed">
+                  {siteConfig.contact.address.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
+                </address>
+              </li>
+            </ul>
+          </div>
 
-          <div className="lg:justify-self-end">
-            <Button href="/account" size="lg">
-              My Account
-            </Button>
+          {/* Main links */}
+          <nav aria-label={mainLinks.title}>
+            <h2 className="mb-4 text-sm font-semibold text-brand-purple">
+              {mainLinks.title}
+            </h2>
+            <ul className="space-y-3">
+              {mainLinks.links.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-brand-muted transition-colors hover:text-brand-purple"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Social */}
+          <div>
+            <h2 className="mb-4 text-sm font-semibold text-brand-purple">
+              Social
+            </h2>
+            <ul className="flex flex-wrap gap-3">
+              {siteConfig.social.map(({ label, href, icon }) => {
+                const Icon = iconMap[icon];
+                return (
+                  <li key={label}>
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={label}
+                      className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-brand-purple text-white transition-colors hover:bg-brand-purple-dark"
+                    >
+                      {Icon && <Icon className="h-5 w-5" aria-hidden="true" />}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
 

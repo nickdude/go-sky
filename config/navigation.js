@@ -18,35 +18,15 @@ export const mainNav = [
 // The highlighted call-to-action button in the header.
 export const headerCta = { label: "Contact Us", href: "/contact" };
 
+// The single "Main Links" column shown in the footer.
 export const footerNav = [
   {
-    title: "Who we are",
+    title: "Main Links",
     links: [
-      { label: "About us", href: "/about" },
-      { label: "Why choose us", href: "/why-us" },
-      { label: "Our values", href: "/about#values" },
-      { label: "Our history", href: "/about#history" },
-      { label: "Our products", href: "/solutions" },
-      { label: "Our businesses", href: "/about#businesses" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { label: "Careers", href: "/careers" },
-      { label: "Newsroom", href: "/newsroom" },
-      { label: "Investor center", href: "/investors" },
-      { label: "IndiGo Air", href: "/network" },
-      { label: "Privacy help center", href: "/privacy" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
-  {
-    title: "CargoWise",
-    links: [
-      { label: "Solutions", href: "/solutions" },
-      { label: "Partners", href: "/partner" },
-      { label: "Support", href: "/support" },
+      { label: "Why GoSky?", href: "/why-us" },
+      { label: "About Us", href: "/about" },
+      { label: "Contact Us", href: "/contact" },
+      { label: "Become a Partner", href: "/partner" },
     ],
   },
 ];

@@ -484,6 +484,24 @@ export function BoxIcon(props) {
   );
 }
 
+export function InstagramIcon(props) {
+  return (
+    <Svg {...props}>
+      <rect
+        x="3"
+        y="3"
+        width="18"
+        height="18"
+        rx="5"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+      <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.7" />
+      <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+    </Svg>
+  );
+}
+
 // Lookup used where icons are referenced by string name in data/config.
 export const iconMap = {
   office: OfficeIcon,
@@ -494,6 +512,7 @@ export const iconMap = {
   facebook: FacebookIcon,
   twitter: TwitterIcon,
   youtube: YoutubeIcon,
+  instagram: InstagramIcon,
   // Why Us feature cards
   clock: ClockIcon,
   users: UsersIcon,

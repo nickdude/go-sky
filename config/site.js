@@ -21,6 +21,9 @@ export const siteConfig = {
   // Default meta description used as a fallback for any page that does not set one.
   description:
     "GoSky Logistics connects businesses, courier companies and airline cargo networks with faster, smarter and technology-driven logistics solutions across India and the world.",
+  // Short blurb used in the footer's "About Us" column.
+  blurb:
+    "Gosky Logistics Pvt. Ltd. is a growing logistics and transportation company committed to providing reliable, efficient and customer-focused logistics solutions across worldwide.",
   keywords: [
     "air cargo",
     "logistics",
@@ -38,14 +41,20 @@ export const siteConfig = {
     site: "@gosky",
   },
   contact: {
-    email: "hello@gosky.example",
-    phone: "+91 00000 00000",
+    email: "connect@gosky.com",
+    phone: "+91 737 839 7539",
+    // Address split into display lines for the footer.
+    address: [
+      "Plot No. D65/30, Near Ganapati",
+      "Temple, Kharghar, Sector 12, Navi",
+      "Mumbai- 410210",
+    ],
   },
   social: [
-    { label: "LinkedIn", href: "https://www.linkedin.com/", icon: "linkedin" },
     { label: "Facebook", href: "https://www.facebook.com/", icon: "facebook" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/", icon: "linkedin" },
     { label: "Twitter", href: "https://twitter.com/", icon: "twitter" },
-    { label: "YouTube", href: "https://www.youtube.com/", icon: "youtube" },
+    { label: "Instagram", href: "https://www.instagram.com/", icon: "instagram" },
   ],
 };
 
