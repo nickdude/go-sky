@@ -7,10 +7,12 @@
 
 export const hero = {
   eyebrow: "Your Trusted Logistics Partner",
-  // `highlight` is rendered in the accent colour inside the heading.
+  // The heading is coloured in parts: `titleBefore`/`titleAfter` use the navy
+  // ink, `highlight` is blue and `titleMiddle` is the brand purple.
   titleBefore: "India's Smart ",
   highlight: "Air",
-  titleAfter: " Cargo & Logistics Network",
+  titleMiddle: " Cargo & Logistics",
+  titleAfter: " Network",
   description:
     "Connecting business, courier companies and airline cargo network with faster, smarter and technology driven logistics solution across India.",
   primaryCta: { label: "Contact Us", href: "/contact" },
