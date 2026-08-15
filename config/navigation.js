@@ -11,11 +11,8 @@
 
 export const mainNav = [
   { label: "Home", href: "/" },
-  { label: "Why Us", href: "/why-us" },
-  { label: "Solutions", href: "/solutions" },
-  { label: "Network", href: "/network" },
   { label: "About Us", href: "/about" },
-  { label: "Become a Partner", href: "/partner" },
+  { label: "Why Us", href: "/why-us" },
 ];
 
 // The highlighted call-to-action button in the header.

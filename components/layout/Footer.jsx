@@ -23,7 +23,7 @@ export default function Footer() {
 
           {footerNav.map((group) => (
             <nav key={group.title} aria-label={group.title}>
-              <h2 className="mb-4 text-sm font-semibold text-brand-blue">
+              <h2 className="mb-4 text-sm font-semibold text-brand-purple">
                 {group.title}
               </h2>
               <ul className="space-y-3">
