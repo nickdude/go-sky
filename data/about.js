@@ -92,7 +92,7 @@ export const team = {
     {
       name: "Rohan Laha",
       role: "Director",
-      image: "/images/team/rohan-laha.png",
+      image: "/images/team/rohan-laha.jpg",
     },
     {
       name: "Manish Borse",
@@ -102,7 +102,7 @@ export const team = {
     {
       name: "Shubham Pandey",
       role: "IT",
-      image: "/images/team/shubham-pandey.jpg",
+      image: "/images/team/shubham-pandey.png",
     },
   ],
 };
