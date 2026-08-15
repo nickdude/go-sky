@@ -14,7 +14,7 @@ export const hero = {
   description:
     "Gosky Logistics Pvt. Ltd. is a growing logistics and transportation company committed to providing reliable, efficient and customer-focused logistics solutions across worldwide.",
   primaryCta: { label: "Contact Us", href: "/contact" },
-  secondaryCta: { label: "Become a Partner", href: "/partner" },
+  secondaryCta: { label: "Become a Partner", href: "/contact" },
   image: {
     src: "/images/about/hero-cargo.png",
     alt: "CMA CGM Air Cargo freight aircraft being loaded on the tarmac at dusk",

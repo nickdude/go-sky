@@ -16,7 +16,7 @@ export const hero = {
   description:
     "Connecting business, courier companies and airline cargo network with faster, smarter and technology driven logistics solution across India.",
   primaryCta: { label: "Contact Us", href: "/contact" },
-  secondaryCta: { label: "Become a Partner", href: "/partner" },
+  secondaryCta: { label: "Become a Partner", href: "/contact" },
   image: {
     src: "/images/hero-graphic.png",
     alt: "Air cargo shipment with partner airline discount rates",
@@ -92,7 +92,7 @@ export const buildingFuture = {
     "Expanding network across India and the world",
   ],
   primaryCta: { label: "Contact Us", href: "/contact" },
-  secondaryCta: { label: "Become a Partner", href: "/partner" },
+  secondaryCta: { label: "Become a Partner", href: "/contact" },
   image: {
     src: "/images/building-loading.png",
     alt: "Cargo being loaded onto a Qatar Airways freight aircraft",
@@ -132,7 +132,7 @@ export const ctaBanner = {
   description:
     "Partner with GoSky and experience the power of India's smart air cargo network across world.",
   primaryCta: { label: "Contact Us", href: "/contact" },
-  secondaryCta: { label: "Become a Partner", href: "/partner" },
+  secondaryCta: { label: "Become a Partner", href: "/contact" },
   image: {
     src: "/images/cta-graphic.png",
     alt: "GoSky delivery partner loading cargo boxes beside an Akasa Air aircraft",

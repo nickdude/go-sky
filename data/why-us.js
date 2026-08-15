@@ -9,7 +9,7 @@ export const hero = {
   description:
     "Customers choose Gosky Logistics because we combine professional logistics management with responsive and personalized service.",
   primaryCta: { label: "Contact Us", href: "/contact" },
-  secondaryCta: { label: "Become a Partner", href: "/partner" },
+  secondaryCta: { label: "Become a Partner", href: "/contact" },
   image: {
     src: "/images/why-us/hero-loading.png",
     alt: "Ground crew loading cargo pallets onto an aircraft",
