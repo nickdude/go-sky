@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens (Tailwind v4 CSS-first theme).
+ * These map the values extracted from the Figma design to Tailwind utilities,
+ * e.g. `--color-brand-purple` becomes `bg-brand-purple`, `text-brand-purple`.
+ * See docs/design-system.md for the source values and rationale.
+ */
+@theme {
+  /* Brand */
+  --color-brand-purple: #4a2f7e;
+  --color-brand-purple-dark: #3b1a7c;
+  --color-brand-blue: #175cff;
+  --color-brand-blue-dark: #0043f0;
+
+  /* Text */
+  --color-brand-ink: #1d1d1f;
+  --color-brand-navy: #1f3361;
+  --color-brand-muted: #57586e;
+
+  /* Surfaces */
+  --color-brand-bg: #f9f9fa;
+  --color-brand-hero: #e8e5f3;
+  --color-brand-lavender: #edeaf5;
+  --color-brand-border: #eeeff2;
+
+  /* Typography — Poppins is loaded via next/font in app/layout.js */
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
