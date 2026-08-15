@@ -33,17 +33,19 @@ export const stats = [
   { label: "Pan India Network", icon: "network" },
 ];
 
+// `width`/`height` are each logo's real pixel dimensions so they can be rendered
+// at a shared height with the correct aspect ratio (no distortion).
 export const partners = [
-  { name: "Air India Cargo", logo: "/images/logos/air-india-cargo.png" },
-  { name: "SpiceXpress", logo: "/images/logos/spicexpress.png" },
-  { name: "Akasa Air", logo: "/images/logos/akasa-air.png" },
-  { name: "IndiGo CarGo", logo: "/images/logos/indigo-cargo.png" },
-  { name: "FedEx", logo: "/images/logos/fedex.png" },
-  { name: "Blue Dart Aviation", logo: "/images/logos/blue-dart.png" },
-  { name: "Alliance Air", logo: "/images/logos/alliance-air.png" },
-  { name: "Pradhaan Air Express", logo: "/images/logos/pradhaan-air.png" },
-  { name: "Etihad Cargo", logo: "/images/logos/etihad-cargo.png" },
-  { name: "Qatar Airways Cargo", logo: "/images/logos/qatar-cargo.png" },
+  { name: "Air India Cargo", logo: "/images/logos/air-india-cargo.png", width: 335, height: 146 },
+  { name: "SpiceXpress", logo: "/images/logos/spicexpress.png", width: 334, height: 241 },
+  { name: "Akasa Air", logo: "/images/logos/akasa-air.png", width: 3840, height: 644 },
+  { name: "IndiGo CarGo", logo: "/images/logos/indigo-cargo.png", width: 696, height: 152 },
+  { name: "FedEx", logo: "/images/logos/fedex.png", width: 500, height: 218 },
+  { name: "Blue Dart Aviation", logo: "/images/logos/blue-dart.png", width: 680, height: 451 },
+  { name: "Alliance Air", logo: "/images/logos/alliance-air.png", width: 1081, height: 265 },
+  { name: "Pradhaan Air Express", logo: "/images/logos/pradhaan-air.png", width: 500, height: 210 },
+  { name: "Etihad Cargo", logo: "/images/logos/etihad-cargo.png", width: 900, height: 500 },
+  { name: "Qatar Airways Cargo", logo: "/images/logos/qatar-cargo.png", width: 1500, height: 785 },
 ];
 
 export const whoWeAre = {

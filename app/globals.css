@@ -42,9 +42,31 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/*
+ * Marquee: a continuously scrolling row. The track renders its items twice, so
+ * translating it by -50% loops seamlessly. Pauses on hover via the wrapping
+ * `.marquee` element.
+ */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 38s linear infinite;
+}
+
 /* Respect users who prefer reduced motion. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .animate-marquee {
+    animation: none;
   }
 }
