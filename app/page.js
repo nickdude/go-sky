@@ -9,6 +9,7 @@ import CtaBanner from "@/components/sections/CtaBanner";
 import Services from "@/components/sections/Services";
 import NetworkMap from "@/components/sections/NetworkMap";
 import Testimonials from "@/components/sections/Testimonials";
+import BlogPreview from "@/components/sections/BlogPreview";
 
 // Page-specific SEO. Every page follows this same pattern (see lib/seo.js).
 export const metadata = buildMetadata({
@@ -31,6 +32,7 @@ export default function HomePage() {
       <Services />
       <NetworkMap />
       <Testimonials />
+      <BlogPreview />
     </>
   );
 }

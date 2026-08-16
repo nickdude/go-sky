@@ -26,9 +26,7 @@ export default function Testimonials() {
                 rating={item.rating}
                 quote={item.quote}
                 author={item.author}
-                role={item.role}
-                logo={item.logo}
-                logoAlt={item.logoAlt}
+                company={item.company}
               />
             </li>
           ))}

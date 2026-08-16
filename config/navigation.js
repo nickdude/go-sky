@@ -13,6 +13,7 @@ export const mainNav = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Why Us", href: "/why-us" },
+  { label: "Blog", href: "/blog" },
 ];
 
 // The highlighted call-to-action button in the header.
@@ -25,6 +26,7 @@ export const footerNav = [
     links: [
       { label: "Why GoSky?", href: "/why-us" },
       { label: "About Us", href: "/about" },
+      { label: "Blog", href: "/blog" },
       { label: "Contact Us", href: "/contact" },
       { label: "Become a Partner", href: "/contact" },
     ],
@@ -46,5 +48,6 @@ export const sitemapRoutes = [
   { path: "/solutions", priority: 0.8, changeFrequency: "monthly" },
   { path: "/network", priority: 0.8, changeFrequency: "monthly" },
   { path: "/about", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
   { path: "/contact", priority: 0.6, changeFrequency: "yearly" },
 ];

@@ -194,34 +194,52 @@ export const testimonials = {
   title: "What our Partners Say",
   items: [
     {
-      id: 1,
-      rating: 4.5,
+      id: "team-global",
+      rating: 5,
       quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
-      author: "Anis S.",
-      role: "Head of Operations, Indigo",
-      logo: "/images/logos/akasa-air.png",
-      logoAlt: "Akasa Air",
+        "We've worked with Gosky for 8 months and they've delivered on both our biggest needs — All-India reach and on-time delivery. 95% of our shipments arrive within the committed TAT.",
+      author: "Raj",
+      company: "Team Global",
     },
     {
-      id: 2,
-      rating: 4.5,
+      id: "sat-global",
+      rating: 5,
       quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
-      author: "Anis S.",
-      role: "Head of Operations, Indigo",
-      logo: "/images/logos/indigo-cargo.png",
-      logoAlt: "IndiGo CarGo",
+        "After switching to Gosky, our on-time delivery rate hit 97% and transit delays in Tier-2 cities dropped by 30%. They don't just move cargo — they move it on time.",
+      author: "Shri",
+      company: "Sat Global",
     },
     {
-      id: 3,
+      id: "bnl",
+      rating: 5,
+      quote:
+        "40+ consignments this quarter, on-time across 12 states, no hidden charges — and a support team that actually picks up the phone. Highly recommended.",
+      author: "Jalal",
+      company: "BNL",
+    },
+    {
+      id: "xiomi",
+      rating: 5,
+      quote:
+        "Our fragile, high-value electronics arrive safe and on time, every shipment. Careful handling from first-mile pickup all the way to the destination hub.",
+      author: "Prasanth",
+      company: "Xiomi",
+    },
+    {
+      id: "rupali-enterprise",
       rating: 4.5,
       quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
-      author: "Anis S.",
-      role: "Head of Operations, Indigo",
-      logo: "/images/logos/blue-dart.png",
-      logoAlt: "Blue Dart Aviation",
+        "As our order volumes grew, Gosky scaled with us — flexible capacity, consistent delivery windows and transparent pricing with no surprises at month end.",
+      author: "Sam",
+      company: "Rupali Enterprise",
+    },
+    {
+      id: "ych-logistics",
+      rating: 5,
+      quote:
+        "As a logistics company ourselves, we're selective about partners. Gosky's genuine pan-India network and joined-up coordination really stand out.",
+      author: "Jossy",
+      company: "YCH Logistics",
     },
   ],
 };
