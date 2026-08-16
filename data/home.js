@@ -18,10 +18,10 @@ export const hero = {
   primaryCta: { label: "Contact Us", href: "/contact" },
   secondaryCta: { label: "Become a Partner", href: "/contact" },
   image: {
-    src: "/images/hero-graphic.png",
-    alt: "Air cargo shipment with partner airline discount rates",
-    width: 1672,
-    height: 941,
+    src: "/images/hero-plane.jpg",
+    alt: "Air India Cargo freighter with palletised cargo on the tarmac",
+    width: 1120,
+    height: 724,
   },
 };
 
