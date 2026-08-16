@@ -301,6 +301,10 @@ export const countryPaths = [
 ];
 
 export const cities = [
+  { name: "Abu Dhabi", x: 1303.6, y: 364.3 },
+  { name: "Dubai", x: 1307.6, y: 359.7 },
+  { name: "Shanghai", x: 1676.7, y: 327.0 },
+  { name: "London", x: 997.5, y: 214.1 },
   { name: "Delhi", x: 1428.9, y: 341.1 },
   { name: "Bangalore", x: 1431.1, y: 427.9 },
   { name: "Chennai", x: 1445.9, y: 427.3 },
