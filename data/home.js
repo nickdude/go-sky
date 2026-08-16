@@ -30,7 +30,7 @@ export const stats = [
   { label: "33+ Operational Offices", icon: "office" },
   { label: "24x7 Support", icon: "support" },
   { label: "Easy Shipment Tracking", icon: "tracking" },
-  { label: "Pan India Network", icon: "network" },
+  { label: "Pan-India + Global", icon: "network" },
 ];
 
 // `width`/`height` are each logo's real pixel dimensions so they can be rendered
@@ -186,7 +186,7 @@ export const services = {
 
 export const network = {
   eyebrow: "Streamlined Fulfillment",
-  title: "Our network across the globe",
+  title: "Pan-India reach, global network",
 };
 
 export const testimonials = {
