@@ -4,14 +4,20 @@ import Button from "@/components/common/Button";
 import { hero } from "@/data/home";
 
 /**
- * Home hero. Contains the page's single <h1>. Two columns on desktop (copy left,
- * Air India Cargo photo right); stacks on mobile.
+ * Home hero. Contains the page's single <h1>.
+ *
+ * On mobile the layout stacks: copy first, then the graphic. On desktop the
+ * graphic is pinned to the right and bleeds off the viewport edge (matching the
+ * Figma), while the copy is constrained to the left within the container.
  */
 export default function Hero() {
   return (
-    <section className="bg-brand-hero" aria-labelledby="hero-heading">
-      <Container className="grid items-center gap-10 py-12 sm:py-16 lg:grid-cols-2 lg:gap-12 lg:py-20">
-        {/* Copy */}
+    <section
+      className="relative overflow-hidden bg-brand-hero"
+      aria-labelledby="hero-heading"
+    >
+      {/* Copy */}
+      <Container className="relative z-10 py-12 sm:py-16 lg:py-24">
         <div className="max-w-xl">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-brand-purple">
             {hero.eyebrow}
@@ -37,24 +43,26 @@ export default function Hero() {
             </Button>
           </div>
         </div>
-
-        {/* Photo with a brand-colour tint so it blends with the site palette. */}
-        <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
-          <Image
-            src={hero.image.src}
-            alt={hero.image.alt}
-            width={hero.image.width}
-            height={hero.image.height}
-            priority
-            sizes="(max-width: 1024px) 92vw, 45vw"
-            className="h-full w-full object-cover"
-          />
-          {/* Purple wash (multiply) tints shadows toward the brand hue. */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-brand-purple/45 via-brand-purple/10 to-transparent mix-blend-multiply" />
-          {/* Soft lavender veil to unify with the section background. */}
-          <div className="pointer-events-none absolute inset-0 bg-brand-purple/10" />
-        </div>
       </Container>
+
+      {/* Graphic: stacks under the copy on mobile; pinned to the right edge on
+          desktop. The PNG's own background is a lavender gradient that matches
+          the section on its left edge but is slightly deeper toward the top/right,
+          so we let it fill the full section height (bleeding off the top/bottom
+          and right) — leaving only the matching left edge visible, with no seam.
+          `flex` is only applied at lg — on mobile it would trigger min-width:auto
+          and blow the image out to its intrinsic width. */}
+      <div className="pb-8 sm:pb-12 lg:absolute lg:inset-y-0 lg:right-0 lg:flex lg:items-center lg:justify-end lg:pb-0">
+        <Image
+          src={hero.image.src}
+          alt={hero.image.alt}
+          width={hero.image.width}
+          height={hero.image.height}
+          priority
+          sizes="(max-width: 1024px) 92vw, 56vw"
+          className="mx-auto h-auto w-[92%] max-w-xl min-w-0 lg:mx-0 lg:h-full lg:w-auto lg:max-w-none"
+        />
+      </div>
     </section>
   );
 }
