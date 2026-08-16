@@ -141,6 +141,49 @@ export const ctaBanner = {
   },
 };
 
+export const services = {
+  eyebrow: "Our Services",
+  title: "Every service for your national and international cargo",
+  items: [
+    {
+      icon: "plane",
+      title: "Air Cargo Solutions",
+      description: "Fast and dependable air cargo solutions",
+      href: "/contact",
+    },
+    {
+      icon: "truck",
+      title: "Surface Transportation",
+      description: "Flexible road transportation solutions",
+      href: "/contact",
+    },
+    {
+      icon: "send",
+      title: "Express Cargo Solutions",
+      description: "Priority logistics solutions for shipments",
+      href: "/contact",
+    },
+    {
+      icon: "route",
+      title: "Door-to-Door Logistics",
+      description: "End-to-end coordination for pickup",
+      href: "/contact",
+    },
+    {
+      icon: "office",
+      title: "B2B Logistics Solutions",
+      description: "Customized transportation support for corporates",
+      href: "/contact",
+    },
+    {
+      icon: "box",
+      title: "Customised Logistics Solutions",
+      description: "Solutions based on operational needs",
+      href: "/contact",
+    },
+  ],
+};
+
 export const network = {
   eyebrow: "Streamlined Fulfillment",
   title: "Our network across the globe",

@@ -6,6 +6,7 @@ import WhoWeAre from "@/components/sections/WhoWeAre";
 import BuildingFuture from "@/components/sections/BuildingFuture";
 import HowItWorks from "@/components/sections/HowItWorks";
 import CtaBanner from "@/components/sections/CtaBanner";
+import Services from "@/components/sections/Services";
 import NetworkMap from "@/components/sections/NetworkMap";
 import Testimonials from "@/components/sections/Testimonials";
 
@@ -27,6 +28,7 @@ export default function HomePage() {
       <BuildingFuture />
       <HowItWorks />
       <CtaBanner />
+      <Services />
       <NetworkMap />
       <Testimonials />
     </>

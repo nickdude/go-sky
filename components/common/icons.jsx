@@ -484,6 +484,51 @@ export function BoxIcon(props) {
   );
 }
 
+/* ---- Services section icons ---- */
+
+export function PlaneIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M12 2.5c-.8 0-1.4 1-1.4 2.2v5L2.5 14v2l8.1-2.4V19l-2.2 1.5V22L12 21l3.6 1v-1.5L13.4 19v-5.4L21.5 16v-2l-8.1-4.3v-5c0-1.2-.6-2.2-1.4-2.2Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+export function SendIcon(props) {
+  return (
+    <Svg {...props}>
+      <path
+        d="M21.5 2.5 10.5 13.5M21.5 2.5 14.5 21.5l-4-8.5-8.5-4 19.5-6.5Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+export function RouteIcon(props) {
+  return (
+    <Svg {...props}>
+      <circle cx="6" cy="18.5" r="2.2" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="18" cy="5.5" r="2.2" stroke="currentColor" strokeWidth="1.6" />
+      <path
+        d="M8.2 18.5H14a3 3 0 0 0 0-6h-4a3 3 0 0 1 0-6h5.8"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeDasharray="0.1 3"
+      />
+    </Svg>
+  );
+}
+
 export function InstagramIcon(props) {
   return (
     <Svg {...props}>
@@ -531,4 +576,8 @@ export const iconMap = {
   history: HistoryIcon,
   target: TargetIcon,
   heart: HeartIcon,
+  // Services section
+  plane: PlaneIcon,
+  send: SendIcon,
+  route: RouteIcon,
 };
