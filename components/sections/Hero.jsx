@@ -38,8 +38,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Photo */}
-        <div className="overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
+        {/* Photo with a brand-colour tint so it blends with the site palette. */}
+        <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
           <Image
             src={hero.image.src}
             alt={hero.image.alt}
@@ -49,6 +49,10 @@ export default function Hero() {
             sizes="(max-width: 1024px) 92vw, 45vw"
             className="h-full w-full object-cover"
           />
+          {/* Purple wash (multiply) tints shadows toward the brand hue. */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-brand-purple/45 via-brand-purple/10 to-transparent mix-blend-multiply" />
+          {/* Soft lavender veil to unify with the section background. */}
+          <div className="pointer-events-none absolute inset-0 bg-brand-purple/10" />
         </div>
       </Container>
     </section>
