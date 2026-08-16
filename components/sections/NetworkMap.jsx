@@ -1,11 +1,12 @@
 import Container from "@/components/common/Container";
 import SectionHeading from "@/components/common/SectionHeading";
-import IndiaMap from "@/components/ui/IndiaMap";
+import WorldMap from "@/components/ui/WorldMap";
 import { network } from "@/data/home";
 
 /**
- * "Our network across the globe" — heading plus a ShipBob-style India map that
- * highlights every city GoSky operates in (see components/ui/IndiaMap.jsx).
+ * "Our network across the globe" — heading plus an interactive world map that
+ * highlights every city GoSky operates in. Defaults to the whole world and can
+ * be zoomed/panned (see components/ui/WorldMap.jsx).
  */
 export default function NetworkMap() {
   const { eyebrow, title } = network;
@@ -15,7 +16,7 @@ export default function NetworkMap() {
       <Container>
         <SectionHeading eyebrow={eyebrow} title={title} />
         <div className="mt-10">
-          <IndiaMap />
+          <WorldMap />
         </div>
       </Container>
     </section>

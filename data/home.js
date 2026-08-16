@@ -144,12 +144,6 @@ export const ctaBanner = {
 export const network = {
   eyebrow: "Streamlined Fulfillment",
   title: "Our network across the globe",
-  image: {
-    src: "/images/world-map.png",
-    alt: "World map showing GoSky's operational hubs across the globe",
-    width: 2672,
-    height: 1262,
-  },
 };
 
 export const testimonials = {

@@ -111,12 +111,6 @@ export const globe = {
   title: "Located around the globe",
   description:
     "Global cargo needs global teams — which is why we have offices in strategic locations, covering multiple markets.",
-  image: {
-    src: "/images/world-map.png",
-    alt: "World map showing GoSky's operational hubs across the globe",
-    width: 2672,
-    height: 1262,
-  },
   stats: [
     { value: "33+", label: "Offices", accent: "ink" },
     { value: "7", label: "Countries", accent: "blue" },
