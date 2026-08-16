@@ -529,6 +529,36 @@ export function RouteIcon(props) {
   );
 }
 
+export function MonitorIcon(props) {
+  return (
+    <Svg {...props}>
+      <rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="1.7" />
+      <path
+        d="M9 20h6M12 16v4"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
+export function BriefcaseIcon(props) {
+  return (
+    <Svg {...props}>
+      <rect x="3" y="7" width="18" height="13" rx="2" stroke="currentColor" strokeWidth="1.7" />
+      <path
+        d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7M3 12.5h18"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </Svg>
+  );
+}
+
 export function InstagramIcon(props) {
   return (
     <Svg {...props}>
@@ -580,4 +610,7 @@ export const iconMap = {
   plane: PlaneIcon,
   send: SendIcon,
   route: RouteIcon,
+  // Team segments
+  briefcase: BriefcaseIcon,
+  monitor: MonitorIcon,
 };

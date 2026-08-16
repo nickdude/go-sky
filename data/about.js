@@ -82,27 +82,65 @@ export const story = {
 
 export const team = {
   eyebrow: "Our team",
-  title: "Our Leadership Team",
-  members: [
+  title: "Meet the team",
+  // Dynamic segments — add more groups here as the team grows. Members without an
+  // `image` fall back to an initials placeholder.
+  segments: [
     {
-      name: "Nitien Bhosale",
-      role: "Founder and Director",
-      image: "/images/team/nitien-bhosale.jpg",
+      id: "directors",
+      label: "Directors",
+      icon: "briefcase",
+      members: [
+        {
+          name: "Nitien Bhosale",
+          role: "Founder and Director",
+          image: "/images/team/nitien-bhosale.jpg",
+        },
+        {
+          name: "Rohan Laha",
+          role: "Director",
+          image: "/images/team/rohan-laha.jpg",
+        },
+      ],
     },
     {
-      name: "Rohan Laha",
-      role: "Director",
-      image: "/images/team/rohan-laha.jpg",
+      id: "leadership",
+      label: "Leadership",
+      icon: "users",
+      members: [
+        {
+          name: "Manish Borse",
+          role: "Operations Head",
+          image: "/images/team/manish-borse.jpg",
+        },
+        {
+          name: "Vinay Kumar Mishra",
+          role: "Linehaul Vehicle Manager",
+          image: "/images/team/vinay-kumar-mishra.jpg",
+        },
+        {
+          name: "Jaminur Jaman",
+          role: "Customer Relationship Manager",
+          image: "/images/team/jaminur-jaman.jpg",
+        },
+        {
+          name: "Adv Yogesh Jagtap",
+          role: "Legal Advisor",
+          image: "/images/team/yogesh-jagtap.jpg",
+        },
+      ],
     },
     {
-      name: "Manish Borse",
-      role: "Operations Head",
-      image: "/images/team/manish-borse.jpg",
-    },
-    {
-      name: "Shubham Pandey",
-      role: "IT",
-      image: "/images/team/shubham-pandey.png",
+      id: "it",
+      label: "IT",
+      icon: "monitor",
+      members: [
+        {
+          name: "Shubham Pandey",
+          role: "IT",
+          image: "/images/team/shubham-pandey.png",
+        },
+      ],
     },
   ],
 };
