@@ -6,9 +6,10 @@ import { hero } from "@/data/home";
 /**
  * Home hero. Contains the page's single <h1>.
  *
- * On mobile the layout stacks: copy first, then the graphic. On desktop the
- * graphic is pinned to the right and bleeds off the viewport edge (matching the
- * Figma), while the copy is constrained to the left within the container.
+ * Desktop: copy on the left, graphic pinned to the right filling the full height
+ * and bleeding off the edges (its left edge matches the section colour, so there
+ * is no seam). Mobile/tablet: copy first, then the graphic full-bleed with a soft
+ * gradient fade at the top so its baked-in background blends into the section.
  */
 export default function Hero() {
   return (
@@ -16,6 +17,12 @@ export default function Hero() {
       className="relative overflow-hidden bg-brand-hero"
       aria-labelledby="hero-heading"
     >
+      {/* Decorative gradient glow for depth. */}
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_60%_at_82%_18%,rgba(255,255,255,0.6),transparent_60%)]"
+        aria-hidden="true"
+      />
+
       {/* Copy */}
       <Container className="relative z-10 py-12 sm:py-16 lg:py-24">
         <div className="max-w-xl">
@@ -45,22 +52,23 @@ export default function Hero() {
         </div>
       </Container>
 
-      {/* Graphic: stacks under the copy on mobile; pinned to the right edge on
-          desktop. The PNG's own background is a lavender gradient that matches
-          the section on its left edge but is slightly deeper toward the top/right,
-          so we let it fill the full section height (bleeding off the top/bottom
-          and right) — leaving only the matching left edge visible, with no seam.
-          `flex` is only applied at lg — on mobile it would trigger min-width:auto
-          and blow the image out to its intrinsic width. */}
-      <div className="pb-8 sm:pb-12 lg:absolute lg:inset-y-0 lg:right-0 lg:flex lg:items-center lg:justify-end lg:pb-0">
+      {/* Graphic. Full-bleed and stacked under the copy on mobile/tablet; pinned
+          to the right and full-height on desktop. `flex` is lg-only — on mobile it
+          would trigger min-width:auto and blow the image out to intrinsic width. */}
+      <div className="relative lg:absolute lg:inset-y-0 lg:right-0 lg:flex lg:items-center lg:justify-end">
+        {/* Top fade blends the graphic's baked-in background into the section. */}
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 z-10 h-16 bg-gradient-to-b from-brand-hero to-transparent sm:h-24 lg:hidden"
+          aria-hidden="true"
+        />
         <Image
           src={hero.image.src}
           alt={hero.image.alt}
           width={hero.image.width}
           height={hero.image.height}
           priority
-          sizes="(max-width: 1024px) 92vw, 56vw"
-          className="mx-auto h-auto w-[92%] max-w-xl min-w-0 lg:mx-0 lg:h-full lg:w-auto lg:max-w-none"
+          sizes="(max-width: 1024px) 100vw, 56vw"
+          className="h-auto w-full min-w-0 lg:h-full lg:w-auto lg:max-w-none"
         />
       </div>
     </section>
