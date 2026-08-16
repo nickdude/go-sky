@@ -6,6 +6,9 @@
  * EnquiryForm and OfficeLocations section components.
  */
 
+// Formspree endpoint the enquiry form posts to.
+export const formEndpoint = "https://formspree.io/f/xeajlrjd";
+
 export const enquiry = {
   eyebrow: "Contact Us",
   title: "Enquire with Us",

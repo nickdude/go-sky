@@ -8,6 +8,7 @@ import {
   countries,
   marketingConsentLabel,
   formDisclaimers,
+  formEndpoint,
 } from "@/data/contact";
 
 const fieldClass =
@@ -19,21 +20,50 @@ function Required() {
 }
 
 /**
- * "Enquire with Us" form. Progressively enhanced: without a backend it validates
- * natively and shows an inline confirmation on submit. Field options and legal
- * copy come from data/contact.js.
+ * "Enquire with Us" form. Submits to Formspree (see `formEndpoint` in
+ * data/contact.js) as multipart form data so the attachment is included, with
+ * inline submitting / success / error states. Field options and legal copy come
+ * from data/contact.js.
  */
 export default function EnquiryForm() {
   const [fileName, setFileName] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  // "idle" | "submitting" | "success" | "error"
+  const [status, setStatus] = useState("idle");
+  const [errorMsg, setErrorMsg] = useState("");
   const fileRef = useRef(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    const form = e.currentTarget;
+    setStatus("submitting");
+    setErrorMsg("");
+
+    try {
+      const res = await fetch(formEndpoint, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form),
+      });
+
+      if (res.ok) {
+        form.reset();
+        setFileName("");
+        setStatus("success");
+      } else {
+        const data = await res.json().catch(() => null);
+        setErrorMsg(
+          data?.errors?.map((err) => err.message).join(", ") ||
+            "Something went wrong. Please try again."
+        );
+        setStatus("error");
+      }
+    } catch {
+      setErrorMsg("Network error. Please check your connection and try again.");
+      setStatus("error");
+    }
   };
 
-  if (submitted) {
+  if (status === "success") {
     return (
       <div className="rounded-2xl border border-brand-border bg-white p-8 text-center">
         <p className="text-lg font-semibold text-brand-ink">Thank you!</p>
@@ -42,7 +72,7 @@ export default function EnquiryForm() {
           possible.
         </p>
         <div className="mt-6">
-          <Button type="button" variant="outline" onClick={() => setSubmitted(false)}>
+          <Button type="button" variant="outline" onClick={() => setStatus("idle")}>
             Send another enquiry
           </Button>
         </div>
@@ -50,8 +80,12 @@ export default function EnquiryForm() {
     );
   }
 
+  const submitting = status === "submitting";
+
   return (
-    <form onSubmit={handleSubmit} noValidate={false} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-5">
+      {/* Nicer subject line in the Formspree notification email. */}
+      <input type="hidden" name="_subject" value="New enquiry from GoSky website" />
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="firstName" className={labelClass}>
@@ -169,9 +203,23 @@ export default function EnquiryForm() {
         <span>{marketingConsentLabel}</span>
       </label>
 
-      <Button type="submit" className="w-full" size="lg">
-        Submit
+      <Button
+        type="submit"
+        className="w-full"
+        size="lg"
+        disabled={submitting}
+      >
+        {submitting ? "Submitting…" : "Submit"}
       </Button>
+
+      {status === "error" && (
+        <p
+          role="alert"
+          className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-600"
+        >
+          {errorMsg}
+        </p>
+      )}
 
       <div className="space-y-3">
         {formDisclaimers.map((text, i) => (
