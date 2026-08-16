@@ -26,6 +26,7 @@ export const footerNav = [
     links: [
       { label: "Why GoSky?", href: "/why-us" },
       { label: "About Us", href: "/about" },
+      { label: "Airport Network", href: "/locations" },
       { label: "Blog", href: "/blog" },
       { label: "Contact Us", href: "/contact" },
       { label: "Become a Partner", href: "/contact" },
@@ -48,6 +49,7 @@ export const sitemapRoutes = [
   { path: "/solutions", priority: 0.8, changeFrequency: "monthly" },
   { path: "/network", priority: 0.8, changeFrequency: "monthly" },
   { path: "/about", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/locations", priority: 0.7, changeFrequency: "monthly" },
   { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
   { path: "/contact", priority: 0.6, changeFrequency: "yearly" },
 ];

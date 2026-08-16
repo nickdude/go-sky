@@ -58,23 +58,3 @@ export const formDisclaimers = [
   "By clicking the “Submit” button below, you allow Gosky to process the personal data you have provided to fulfil your request. To obtain more information on how Gosky processes personal data and its commitment to ensure privacy, please read the privacy notice.",
   "You additionally allow Gosky to contact you with marketing and product information by clicking the checkbox below. These communications include newsletters, exclusive invitations to events, promotions, offers, product updates and logistics content. You may unsubscribe at any time by using the “unsubscribe” link found at the bottom of each communication.",
 ];
-
-// Office locations shown in the purple band. Currently a single hub repeated to
-// mirror the design; add entries here as new offices come online.
-export const offices = Array.from({ length: 4 }, (_, i) => ({
-  id: `delhi-${i + 1}`,
-  city: "Delhi",
-  address: [
-    "Indira Gandhi Int'l Airport,",
-    "Air India GSD Complex,",
-    "Delhi Cargo Terminal, New",
-    "Delhi, Delhi 110037",
-  ],
-  href: "/contact",
-  image: {
-    src: "/images/shared/office-delhi.png",
-    alt: "Delhi city skyline near the GoSky cargo hub",
-    width: 1024,
-    height: 683,
-  },
-}));
