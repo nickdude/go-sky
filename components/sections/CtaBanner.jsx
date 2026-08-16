@@ -13,8 +13,10 @@ export default function CtaBanner() {
   return (
     <section className="bg-brand-bg pb-16 lg:pb-24">
       <Container>
-        <div className="relative overflow-hidden rounded-3xl bg-brand-purple">
-          <div className="grid items-center gap-8 lg:grid-cols-2">
+        {/* Background matches the illustration's own purple (#38187b) so the
+            graphic blends seamlessly into the banner instead of showing a box. */}
+        <div className="relative overflow-hidden rounded-3xl bg-[#38187b]">
+          <div className="grid items-center gap-6 lg:grid-cols-[1fr_1.05fr]">
             <div className="px-8 py-12 sm:px-12 lg:py-16">
               <h2 className="text-3xl font-semibold text-white sm:text-4xl">
                 {title}
@@ -32,13 +34,13 @@ export default function CtaBanner() {
               </div>
             </div>
 
-            <div className="relative h-56 sm:h-72 lg:h-full lg:min-h-[320px]">
+            <div className="relative h-52 sm:h-64 lg:h-full lg:min-h-[300px]">
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain object-bottom lg:object-right-bottom"
+                sizes="(max-width: 1024px) 100vw, 52vw"
+                className="object-contain object-bottom lg:object-right"
               />
             </div>
           </div>
