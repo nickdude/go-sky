@@ -145,6 +145,33 @@ export const team = {
   ],
 };
 
+export const certifications = {
+  eyebrow: "Awards & Recognition",
+  title: "Certified & compliant",
+  subtitle:
+    "Our registrations and certifications. Click any certificate to view the full document.",
+  items: [
+    {
+      title: "Certificate of Incorporation",
+      issuer: "Ministry of Corporate Affairs, Govt. of India",
+      file: "/certificates/incorporation-certificate.pdf",
+      image: "/images/certificates/incorporation-certificate.png",
+    },
+    {
+      title: "GST Registration",
+      issuer: "Government of India",
+      file: "/certificates/gst-certificate-amendment.pdf",
+      image: "/images/certificates/gst-certificate-amendment.png",
+    },
+    {
+      title: "Dangerous Goods by Air",
+      issuer: "ICAO–FIATA · DGCA approved",
+      file: "/certificates/dg-certificate.pdf",
+      image: "/images/certificates/dg-certificate.png",
+    },
+  ],
+};
+
 export const globe = {
   title: "Located around the globe",
   description:

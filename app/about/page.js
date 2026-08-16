@@ -3,6 +3,7 @@ import MediaHero from "@/components/sections/MediaHero";
 import AboutStatement from "@/components/sections/AboutStatement";
 import OurStory from "@/components/sections/OurStory";
 import LeadershipTeam from "@/components/sections/LeadershipTeam";
+import Certifications from "@/components/sections/Certifications";
 import GlobePresence from "@/components/sections/GlobePresence";
 import { hero } from "@/data/about";
 
@@ -20,6 +21,7 @@ export default function AboutPage() {
       <AboutStatement />
       <OurStory />
       <LeadershipTeam />
+      <Certifications />
       <GlobePresence />
     </>
   );
