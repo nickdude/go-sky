@@ -42,7 +42,7 @@ export const siteConfig = {
   },
   contact: {
     email: "nomination@gosky.com",
-    phone: "+91 737 839 7539",
+    phone: "+91 750 732 4444",
     // Address split into display lines for the footer.
     address: [
       "Plot No. D65/30, Near Ganapati",
