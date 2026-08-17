@@ -45,9 +45,9 @@ export const siteConfig = {
     phone: "+91 750 732 4444",
     // Address split into display lines for the footer.
     address: [
-      "Plot No. D65/30, Near Ganapati",
-      "Temple, Kharghar, Sector 12, Navi",
-      "Mumbai- 410210",
+      "Juhi Niharika Mirage, Plot No. 274,",
+      "Sector-10, Kharghar,",
+      "Navi Mumbai 410210",
     ],
   },
   social: [
