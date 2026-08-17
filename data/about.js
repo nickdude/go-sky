@@ -92,7 +92,7 @@ export const team = {
       icon: "briefcase",
       members: [
         {
-          name: "Nitien Bhosale",
+          name: "Nitin Bhosale",
           role: "Founder and Director",
           image: "/images/team/nitien-bhosale.jpg",
         },
