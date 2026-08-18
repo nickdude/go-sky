@@ -337,3 +337,17 @@ export const cities = [
 
 // Bounding box (viewBox units) around GoSky's cities — used for the zoom-to-India control.
 export const focusBox = { x0: 1403.2, y0: 341.1, x1: 1509.7, y1: 444.8 };
+
+// Decorative flight routes drawn between cities (by name) as animated arcs.
+// A curated set — international gateways into the India hubs plus a few domestic
+// legs — kept small so the map reads clean rather than cluttered.
+export const routes = [
+  { from: "London", to: "Delhi" },
+  { from: "Shanghai", to: "Delhi" },
+  { from: "Dubai", to: "Delhi" },
+  { from: "Abu Dhabi", to: "Mumbai" },
+  { from: "Delhi", to: "Kolkata" },
+  { from: "Delhi", to: "Bangalore" },
+  { from: "Mumbai", to: "Chennai" },
+  { from: "Kolkata", to: "Chennai" },
+];

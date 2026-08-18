@@ -1,7 +1,43 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { viewBox, worldSize, countryPaths, cities, focusBox } from "@/data/worldMap";
+import { useEffect, useMemo, useRef, useState } from "react";
+import {
+  viewBox,
+  worldSize,
+  countryPaths,
+  cities,
+  focusBox,
+  routes,
+} from "@/data/worldMap";
+
+// A paper-plane glyph pointing along +x (so `rotate="auto"` banks it along the
+// flight path). Drawn around the origin; counter-scaled to stay a constant size.
+const PLANE = "M12 0 L-8 -7 L-3 0 L-8 7 Z";
+
+// Build a curved arc between two points, bowing "upward" like a flight path.
+// Returns the SVG path plus the midpoint + tangent angle (for the static,
+// reduced-motion fallback).
+function buildArc(a, b) {
+  const mx = (a.x + b.x) / 2;
+  const my = (a.y + b.y) / 2;
+  const dx = b.x - a.x;
+  const dy = b.y - a.y;
+  const len = Math.hypot(dx, dy) || 1;
+  let px = -dy / len;
+  let py = dx / len;
+  if (py > 0) {
+    px = -px;
+    py = -py;
+  } // ensure the bow curves toward the top of the map
+  const bow = 0.22;
+  const cx = mx + px * len * bow;
+  const cy = my + py * len * bow;
+  const qx = 0.25 * a.x + 0.5 * cx + 0.25 * b.x;
+  const qy = 0.25 * a.y + 0.5 * cy + 0.25 * b.y;
+  // Tangent of a quadratic Bézier at its midpoint is parallel to the chord.
+  const angle = (Math.atan2(dy, dx) * 180) / Math.PI;
+  return { d: `M${a.x},${a.y} Q${cx},${cy} ${b.x},${b.y}`, qx, qy, angle, len };
+}
 
 // Zoom anchors on GoSky's cities (India) since that's where every pin is, so
 // zooming in focuses the network rather than the middle of the ocean.
@@ -36,8 +72,37 @@ function clampView(x, y, scale) {
  */
 export default function WorldMap({ showChips = true }) {
   const [view, setView] = useState({ scale: 1, x: 0, y: 0 });
+  const [reducedMotion, setReducedMotion] = useState(false);
   const svgRef = useRef(null);
   const drag = useRef(null);
+
+  // Disable the moving planes for users who prefer reduced motion. The initial
+  // read is deferred a frame so it isn't a synchronous setState in the effect
+  // (and stays hydration-safe: server/first client render match).
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const onChange = (e) => setReducedMotion(e.matches);
+    mq.addEventListener("change", onChange);
+    const raf = requestAnimationFrame(() => setReducedMotion(mq.matches));
+    return () => {
+      cancelAnimationFrame(raf);
+      mq.removeEventListener("change", onChange);
+    };
+  }, []);
+
+  // Resolve each route to its arc geometry once (coordinates are static).
+  const arcs = useMemo(() => {
+    const byName = new Map(cities.map((c) => [c.name, c]));
+    return routes
+      .map((r) => {
+        const a = byName.get(r.from);
+        const b = byName.get(r.to);
+        if (!a || !b) return null;
+        const arc = buildArc(a, b);
+        return { ...arc, dur: Math.min(11, Math.max(5, arc.len / 55)) };
+      })
+      .filter(Boolean);
+  }, []);
 
   const zoomTo = (nextScale) => {
     setView((v) => {
@@ -137,6 +202,42 @@ export default function WorldMap({ showChips = true }) {
                   strokeWidth={0.6 * k}
                   strokeLinejoin="round"
                 />
+              ))}
+            </g>
+
+            {/* Flight routes: dashed arcs with a plane travelling along each. */}
+            <g className="pointer-events-none">
+              {arcs.map((arc, i) => (
+                <g key={i}>
+                  <path
+                    d={arc.d}
+                    fill="none"
+                    className="stroke-brand-blue/40"
+                    strokeWidth={1.3 * k}
+                    strokeLinecap="round"
+                    strokeDasharray={`${5 * k} ${6 * k}`}
+                  />
+                  {reducedMotion ? (
+                    <g
+                      transform={`translate(${arc.qx} ${arc.qy}) rotate(${arc.angle}) scale(${k})`}
+                    >
+                      <path d={PLANE} className="fill-brand-purple" />
+                    </g>
+                  ) : (
+                    <g>
+                      <g transform={`scale(${k})`}>
+                        <path d={PLANE} className="fill-brand-purple" />
+                      </g>
+                      <animateMotion
+                        path={arc.d}
+                        rotate="auto"
+                        dur={`${arc.dur}s`}
+                        begin={`-${(i * 1.3).toFixed(1)}s`}
+                        repeatCount="indefinite"
+                      />
+                    </g>
+                  )}
+                </g>
               ))}
             </g>
 
