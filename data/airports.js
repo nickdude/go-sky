@@ -49,6 +49,14 @@ export const airports = [
     image: { src: "/images/airports/delhi.jpg", alt: "Indira Gandhi International Airport, Delhi" },
   },
   {
+    slug: "gurugram",
+    city: "Gurugram",
+    iata: "",
+    name: "Gurugram Airport, Delhi NCR",
+    address: ["Gurugram,", "Haryana 122001"],
+    image: { src: "/images/airports/gurugram.jpg", alt: "Gurugram, Delhi NCR" },
+  },
+  {
     slug: "mumbai",
     city: "Mumbai",
     iata: "BOM",

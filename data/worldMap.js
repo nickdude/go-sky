@@ -306,6 +306,7 @@ export const cities = [
   { name: "Shanghai", x: 1676.7, y: 327.0 },
   { name: "London", x: 997.5, y: 214.1 },
   { name: "Delhi", x: 1428.9, y: 341.1 },
+  { name: "Gurugram", x: 1428.0, y: 341.9 },
   { name: "Bangalore", x: 1431.1, y: 427.9 },
   { name: "Chennai", x: 1445.9, y: 427.3 },
   { name: "Kolkata", x: 1490.9, y: 374.6 },
