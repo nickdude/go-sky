@@ -1,7 +1,7 @@
 import Container from "@/components/common/Container";
 import Button from "@/components/common/Button";
 import OfficeCard from "@/components/ui/OfficeCard";
-import { airports } from "@/data/airports";
+import { airports, networkTagline } from "@/data/airports";
 
 /**
  * Dark purple band previewing GoSky's airport network. Shows the first four
@@ -22,6 +22,9 @@ export default function OfficeLocations() {
             <h2 className="text-2xl font-semibold sm:text-3xl">
               Serving {airports.length} airports across India &amp; the world
             </h2>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/75">
+              {networkTagline}
+            </p>
           </div>
           <Button href="/locations" variant="light" withArrow className="shrink-0">
             View all airports

@@ -7,6 +7,10 @@
  * and addresses are public data.
  */
 
+// Supporting stat line shown under the network heading.
+export const networkTagline =
+  "Backed by 3,200+ daily flights.";
+
 export const airports = [
   {
     slug: "abu-dhabi",

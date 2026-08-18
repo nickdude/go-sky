@@ -2,7 +2,7 @@ import { buildMetadata } from "@/lib/seo";
 import Container from "@/components/common/Container";
 import SectionHeading from "@/components/common/SectionHeading";
 import OfficeCard from "@/components/ui/OfficeCard";
-import { airports } from "@/data/airports";
+import { airports, networkTagline } from "@/data/airports";
 
 export const metadata = buildMetadata({
   title: "Our Airport Network",
@@ -19,7 +19,7 @@ export default function LocationsPage() {
           as="h1"
           eyebrow="Our Network"
           title={`Serving ${airports.length} airports across India & the world`}
-          subtitle="From metros to Tier-2 cities and key international gateways, GoSky moves your cargo through airports worldwide. Here's where we operate."
+          subtitle={networkTagline}
         />
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {airports.map((airport) => (
