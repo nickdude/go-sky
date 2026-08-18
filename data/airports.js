@@ -65,6 +65,14 @@ export const airports = [
     image: { src: "/images/airports/mumbai.jpg", alt: "Chhatrapati Shivaji Maharaj International Airport, Mumbai" },
   },
   {
+    slug: "navi-mumbai",
+    city: "Navi Mumbai",
+    iata: "NMI",
+    name: "Navi Mumbai International Airport",
+    address: ["Ulwe, Navi Mumbai,", "Maharashtra 410206"],
+    image: { src: "/images/airports/navi-mumbai.jpg", alt: "Navi Mumbai International Airport" },
+  },
+  {
     slug: "bengaluru",
     city: "Bengaluru",
     iata: "BLR",
