@@ -169,6 +169,12 @@ export const certifications = {
       file: "/certificates/dg-certificate.pdf",
       image: "/images/certificates/dg-certificate.png",
     },
+    {
+      title: "Udyam Registration",
+      issuer: "Ministry of Micro, Small & Medium Enterprises",
+      file: "/certificates/udyam-registration-certificate.pdf",
+      image: "/images/certificates/udyam-registration-certificate-v20260823-221153.png",
+    },
   ],
 };
 
