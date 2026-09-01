@@ -123,10 +123,24 @@ export const team = {
           role: "Customer Relationship Manager",
           image: "/images/team/jaminur-jaman.jpg",
         },
+      ],
+    },
+    {
+      id: "advisors",
+      label: "Advisors",
+      icon: "briefcase",
+      members: [
         {
-          name: "Adv Yogesh Jagtap",
+          name: "Chartered Accountant",
+          role: "Finance Advisory",
+          image: "/images/ca.jpeg",
+          fit: "contain",
+        },
+        {
+          name: "Kale & Shinde",
           role: "Legal Advisor",
-          image: "/images/team/yogesh-jagtap.jpg",
+          image: "/images/legal_advisor.jpeg",
+          fit: "contain",
         },
       ],
     },

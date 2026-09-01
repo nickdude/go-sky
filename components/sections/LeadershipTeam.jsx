@@ -59,7 +59,12 @@ export default function LeadershipTeam() {
         <ul className="mt-12 flex flex-wrap justify-center gap-6 sm:gap-8">
           {activeSegment.members.map((member) => (
             <li key={member.name} className="w-36 sm:w-44 lg:w-52">
-              <TeamCard name={member.name} role={member.role} image={member.image} />
+              <TeamCard
+                name={member.name}
+                role={member.role}
+                image={member.image}
+                fit={member.fit || "cover"}
+              />
             </li>
           ))}
         </ul>

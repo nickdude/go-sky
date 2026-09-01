@@ -8,8 +8,9 @@ import Image from "next/image";
  * @param {string} props.name
  * @param {string} props.role
  * @param {string} [props.image]
+ * @param {"cover" | "contain"} [props.fit]
  */
-export default function TeamCard({ name, role, image }) {
+export default function TeamCard({ name, role, image, fit = "cover" }) {
   const initials = name
     .split(" ")
     .filter(Boolean)
@@ -18,16 +19,21 @@ export default function TeamCard({ name, role, image }) {
     .join("")
     .toUpperCase();
 
+  const imageClassName =
+    fit === "contain"
+      ? "object-contain bg-white p-4"
+      : "object-cover object-top";
+
   return (
     <figure>
-      <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-brand-lavender">
+      <div className="relative aspect-4/5 w-full overflow-hidden rounded-xl bg-brand-lavender">
         {image ? (
           <Image
             src={image}
             alt={`${name}, ${role}`}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 240px"
-            className="object-cover object-top"
+            className={imageClassName}
           />
         ) : (
           <div
