@@ -24,11 +24,11 @@ export default function LeadershipTeam() {
         <SectionHeading eyebrow={eyebrow} title={title} align="center" />
 
         {/* Segmented control */}
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 w-full overflow-x-auto scrollbar-none">
           <div
             role="tablist"
             aria-label="Team groups"
-            className="inline-flex gap-1 rounded-full bg-brand-lavender p-1"
+            className="mx-auto flex w-max min-w-full justify-center gap-1 rounded-full bg-brand-lavender p-1"
           >
             {segments.map((segment) => {
               const selected = segment.id === active;
@@ -41,7 +41,7 @@ export default function LeadershipTeam() {
                   aria-selected={selected}
                   onClick={() => setActive(segment.id)}
                   className={cn(
-                    "inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-colors",
+                    "inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full px-3 py-2.5 text-[13px] font-medium transition-colors sm:px-5 sm:text-sm",
                     selected
                       ? "bg-white text-brand-ink shadow-sm"
                       : "text-brand-muted hover:text-brand-ink"
