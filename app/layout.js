@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import SubscriptionBanner from "@/components/layout/SubscriptionBanner";
 import { siteConfig } from "@/config/site";
 
 /*
@@ -53,6 +54,7 @@ export default function RootLayout({ children }) {
           Skip to content
         </a>
         <div id="top" />
+        <SubscriptionBanner />
         <Header />
         <main id="main">{children}</main>
         <Footer />
