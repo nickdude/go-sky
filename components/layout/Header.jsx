@@ -22,7 +22,7 @@ export default function Header() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-brand-border bg-white/95 backdrop-blur">
+    <header className="sticky top-[72px] z-50 border-b border-brand-border bg-white/95 backdrop-blur sm:top-12">
       <Container className="flex h-20 items-center justify-between gap-4">
         <Logo priority height={40} />
 
